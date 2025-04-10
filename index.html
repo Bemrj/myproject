@@ -1,176 +1,411 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCC LEARN PROGRAMMING</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        .menu {
-            display: flex;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            background-color: #007bff;
-            color: white;
-            padding: 80px 20px;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-        }
-
-        .hero p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: white;
-            color: #007bff;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        /* Responsive Grid */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .box h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        /* Responsive Navbar */
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #007bff;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                text-align: center;
-            }
-
-            .menu a {
-                padding: 10px;
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+<title>MyProj</title>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#" class="logo">RCC</a>
-        <span class="menu-toggle">&#9776;</span>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">SHIZU</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <a href="" class="btn btn-danger"> Contact Us</a>
+           
+          </div>
         </div>
-    </nav>
+      </nav>
+      <!--banner-->
+      <div id="banner">
+         <div class="container d-flex align-items-center justify-content-center">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <h1>Lorem ipsum, dolor sit amet fugit vel. Saepe, officia mollitia vel quod numquam rem labore!</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                  <a href="" class="btn btn-primary">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to RCC Programming World</h1>
-        <p>A modern and responsive web system.</p>
-        <a href="#" class="btn">Get Started</a>
-    </section>
+      <!--company-->
+      <div id="company">
+        <div class="container">
+            <h4 class="text-center">Trusted Company Since 2050</h4>
+            <div class="row">
+                <div class="col">
+                    <img src="shizu.jpg" alt="" class="img-fluid">
+                </div>
 
-    <!-- Responsive Grid -->
-    <div class="container">
-        <h2 class="text-center">Our Features</h2>
-        <div class="grid">
-            <div class="box">
-                <h3>Feature 1</h3>
-                <p>Description of feature 1.</p>
+                <div class="col">
+                    <img src="shizu.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="shizu.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="shizu.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="shizu.jpg" alt="" class="img-fluid">
+                </div>
             </div>
-            <div class="box">
-                <h3>Feature 2</h3>
-                <p>Description of feature 2.</p>
-            </div>
-            <div class="box">
-                <h3>Feature 3</h3>
-                <p>Description of feature 3.</p>
-            </div>
+
         </div>
-    </div>
 
-    <script>
-        // Toggle Mobile Menu
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector(".menu").classList.toggle("active");
-        });
-    </script>
+      </div>
 
+        <!--service-->
+        <section id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <h6 class="text-primary"> Service</h6>
+                        <h3> What We Do</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                        
+                    </div>
+
+                    <div class="col col-lg-6 text-end">
+                        <a href="" class="btn btn-primary">Contact US</a>
+                    </div>
+
+                </div>
+                <!--card-->
+                <div class="row row-cols-lg-4">
+                    <div class="col">
+                        <div class="card p-3">
+                            <img src="crop.jpg" class="card-img-top mx-auto" alt="...">
+                            <div class="card-body text-center">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card p-3">
+                            <img src="crop.jpg" class="card-img-top mx-auto" alt="...">
+                            <div class="card-body text-center">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3">
+                            <img src="crop.jpg" class="card-img-top mx-auto" alt="...">
+                            <div class="card-body text-center">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3">
+                            <img src="crop.jpg" class="card-img-top mx-auto" alt="...">
+                            <div class="card-body text-center">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+
+                 
+
+
+
+
+
+            </div>    
+        </section>
+
+<br>
+<br>
+<br>
+        <!--about-->
+        <div id="about">
+          <div class="container" >
+            <div class="row  align-items-center">
+              <div class="col-lg-6">
+                <h6 class="text-primary "> About</h6>
+                <h3> Who We Are</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur 
+                  adipisicing elit. Perspiciatis unde sit nostrum facere. Quidem consequuntur assumenda repudiandae aspernatur cupiditate dolore consequatur, maxime autem expedita dolorem illo error repellat ut quam.</p>
+                <a href="shizzz.jpg" class="btn btn-primary">Contact US</a>
+                
+            </div>
+            <div class="col-lg-6">
+              <img src="shizzz.jpg" alt="">
+          </div>
+            </div>
+         </div>
+         </div>
+
+          <!--call to action-->
+          <div class="cta d-flex align-items-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h5>Lorem sasac </h5>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                  <a href="shizzz.jpg" class="btn btn-primary">Contact US</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--reviews-->
+          <section id="reviews">
+            <div class="container">
+              <div class="text-center">
+                <h2 class="text-primary">Reviews</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+              </div>
+
+
+
+               <!--cth-->
+              <div class="row row-cols-lg-4">
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="testimonial">
+                    <div class="d-flex align-items-center">
+                      <img src="shizu.jpg" alt="" >
+                      <div class="ms-4">
+                        <h5>Lorem.</h5>
+                        <h6>Client</h6>
+                      </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                   
+
+                  </div>
+                </div>
+              </div>
+
+
+    
+            </div>
+          </section>
+          <br>
+          <br>
+<!--faqa-->
+          <section id="faq">
+            <div class="container">
+              <div class="faq-section">
+                <h2> Frequently Ask Question</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- Footer -->
+     <footer class="footer text-white" id="footer">
+      <div class="container">
+          <div class="row al">
+              <div class="col-md-3 col-sm-6 text-lg-start text-center">
+                  <a class="navbar-brand" href="#">
+                      <img src="cos.png" alt="Logo" height="60px">
+                  </a>
+                  <h5 class="mt-4">About Us</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+              </div>
+              <div class="col-md-3 col-sm-6 text-lg-start ps-lg-5 ps-0 text-center ">
+                  <h5>Services</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Service 1</a></li>
+                      <li><a href="#">Service 2</a></li>
+                      <li><a href="#">Service 3</a></li>
+                      <li><a href="#">Service 4</a></li>
+                      <li><a href="#">Service 5</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-3 col-sm-6 text-lg-start text-center">
+                  <h5>Contact Us</h5>
+                  <p>123 Street Name,<br>City, Country</p>
+                  <p>Email: example@example.com<br>Phone: +1234567890</p>
+              </div>
+              <div class="col-md-3 col-sm-6 text-lg-start  text-center">
+                  <h5>Newsletter</h5>
+                  <form>
+                      <div class="input-group mb-3">
+                          <input type="text" class="form-control" style="border-radius: 1px;" placeholder="Email"
+                              aria-label="email" aria-describedby="button-addon2">
+                          <button class="btn btn-outline-light" type="button" id="button-addon2">Subscribe</button>
+                      </div>
+                  </form>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
 </body>
 </html>
